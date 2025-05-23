@@ -9,14 +9,14 @@ type BlurEffectProps = {
 export default function BlurEffect({
   className = '',
   intensity = 50,
-  position = 'bottom'
+  position = 'top'
 }: BlurEffectProps) {
   const intensityFactor = intensity / 50;
-
+  
   const blurLayers = [
     { blur: `${1 * intensityFactor}px`, maskStart: 0, maskEnd: 25, zIndex: 1 },
     { blur: `${3 * intensityFactor}px`, maskStart: 25, maskEnd: 75, zIndex: 2 },
-    { blur: `${6 * intensityFactor}px`, maskStart: 75, maskEnd: 100, zIndex: 3 }
+    { blur: `${6 * intensityFactor}px`, maskStart: 75, maskEnd: 100, zIndex: 3 },
   ];
 
   const positionClasses = {
@@ -34,17 +34,17 @@ export default function BlurEffect({
   };
 
   return (
-    <div className={`absolute pointer-events-none ${positionClasses[position]} ${className}`}>
+    <div className={`absolute ${positionClasses[position]} z-10 ${className}`}>
       {blurLayers.map((layer, index) => (
         <div
           key={index}
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
             zIndex: layer.zIndex,
             backdropFilter: `blur(${layer.blur})`,
             WebkitBackdropFilter: `blur(${layer.blur})`,
-            maskImage: `linear-gradient(${gradientDirection[position]}, rgba(0,0,0,1) ${layer.maskStart}%, rgba(0,0,0,0) ${layer.maskEnd}%)`,
-            WebkitMaskImage: `linear-gradient(${gradientDirection[position]}, rgba(0,0,0,1) ${layer.maskStart}%, rgba(0,0,0,0) ${layer.maskEnd}%)`
+            maskImage: `linear-gradient(${gradientDirection[position]}, transparent ${layer.maskStart}%, black ${layer.maskEnd}%)`,
+            WebkitMaskImage: `linear-gradient(${gradientDirection[position]}, transparent ${layer.maskStart}%, black ${layer.maskEnd}%)`
           }}
         />
       ))}

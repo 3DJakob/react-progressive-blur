@@ -1,6 +1,6 @@
 {
   "name": "react-progressive-blur",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,11 +17,14 @@
     "progressive",
     "component"
   ],
-  "author": "Your Name",
+  "author": "Rakibur Rahaman",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "react-progressive-blur": "^1.0.0"
   }
 }
