@@ -20,6 +20,9 @@ npm install react-progressive-blur
 
 ### Basic Example
 
+![Basic Example](https://github.com/rakib86/react-progressive-blur/raw/main/assets/react-progressive-blur-demo-1.jpg)
+
+
 ```tsx
 import React from "react";
 import BlurEffect from "react-progressive-blur";
