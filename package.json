@@ -1,12 +1,20 @@
 {
   "name": "react-progressive-blur",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakib86/react-progressive-blur.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rakib86/react-progressive-blur/issues"
+  },
+  "homepage": "https://rakib86.github.io/react-progressive-blur",
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
