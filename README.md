@@ -2,6 +2,12 @@
 
 A lightweight React component that creates smooth, progressive blur effects with customizable intensity and positioning. Perfect for creating modern UI overlays, video controls, and aesthetic blur gradients.
 
+### Basic Example
+
+![Basic Example](https://github.com/rakib86/react-progressive-blur/raw/main/assets/react-progressive-blur-demo-1.jpg)
+![Basic Example](https://github.com/rakib86/react-progressive-blur/raw/main/assets/react-progressive-blur-demo-2.jpg)
+
+
 ## Features
 
 - 🎯 **Progressive blur layers** - Creates smooth transitions with multiple blur intensities
@@ -18,10 +24,6 @@ npm install react-progressive-blur
 
 ## Usage
 
-### Basic Example
-
-![Basic Example](https://github.com/rakib86/react-progressive-blur/raw/main/assets/react-progressive-blur-demo-1.jpg)
-![Basic Example](https://github.com/rakib86/react-progressive-blur/raw/main/assets/react-progressive-blur-demo-2.jpg)
 
 ```tsx
 import React from "react";
